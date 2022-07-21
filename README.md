@@ -1,5 +1,5 @@
 # BankingSystem
-A banking system with users
+A banking system with users(no GUI)
 -
 You can register as an employee
 -
@@ -28,3 +28,4 @@ Customers have many options
   Can check the Exchange rate and also do calculations with any amount of money
   
   ---
+<strong>Contributors :[Hideki Natsumi](https://github.com/HidekiNatsumi) 
