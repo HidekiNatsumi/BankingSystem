@@ -17,7 +17,7 @@ Customers have many options.
    <li>Can Deposit Funds</li>
    <li>Can withdraw money from their account</li>
    <li>Can check their balance</li>
-  <li>Can transfer money to other members</li>
+   <li>Can transfer money to other members</li>
    <li>log out</li>
   </ul>
   
