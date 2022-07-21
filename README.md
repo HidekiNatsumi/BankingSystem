@@ -20,8 +20,11 @@ Customers have many options
   <li>Can transfer money to other members</li>
    <li>log out</li>
   </ul>
+  
   Information
   -
+  
   Can be updated in the first page with the bank's informations 
   Can check the Exchange rate and also do calculations with any amount of money
+  
   ---
