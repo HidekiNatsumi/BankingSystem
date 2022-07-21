@@ -3,7 +3,7 @@ A banking system with users
 -
 You can register as an employee
 -
-Employee has many options
+Employees have many options
 <ul>
    <li>Can add customers</li>
    <li>Check transactions</li>
