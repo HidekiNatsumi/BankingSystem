@@ -1,0 +1,4 @@
+Hideki Natsumi 1234 3484 employee
+fiddle stone 1234 6456 customer
+garen man 1234 8738 customer
+vicious spear 4321 6030 customer
