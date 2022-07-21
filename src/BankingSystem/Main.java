@@ -192,10 +192,10 @@ when logged in as an employee you have the option to:
 -add a customer account
 -see the transaction history of a customer
 -see the deposits of a customer
--confirm bank loans
+-confirm bank loans(future)
 when logged in as a customer you have the option to:
 -add funds (deposit)money in your account
 -withdraw money from your account
--request bank loans
--convert money
+-request bank loans(future)
+-convert money(future)
  */
