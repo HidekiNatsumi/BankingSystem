@@ -587,7 +587,7 @@ public void createFiles() throws IOException {
         customers=new String[count];
         employees=new String[count1];
         System.out.println("Welcome to our Bank");
-        System.out.println("Currently there are "+customers.length+ " customers and "+employees.length+" employees ");
+        System.out.println("Our bank has "+customers.length+ " customers and "+employees.length+" employees ");
         System.out.println("Current interest rate is 5%");
         System.out.println("Contact an employee to open a bank account");
         System.out.println("The default currency used on this bank is US Dollar");
