@@ -611,6 +611,11 @@ fileLength(savingsFile);
                 System.out.println("You cant transfer from your account to your account!");
                 return;
             }
+             if(idC==0){
+           
+                System.out.println("You can't transfer your funds to this account!");
+                return;
+            }
           if(idC==tempnr){
               FileWriter fw = new FileWriter(transactionHistory,true);
 
