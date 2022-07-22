@@ -46,7 +46,7 @@ bank.createFiles();//for first time use
             System.out.println("Calculate exchange rates\nexit ");
             System.out.println("---------------------------------------");
             int decide1=sc.nextInt();
-            if(decide1==1){
+               if(decide1==1){
                 System.out.println("---------------------------------------");
                 System.out.println("Exchange USDollar with\nEuro\nALLek\nYen");
                 System.out.println("---------------------------------------");
@@ -54,23 +54,30 @@ bank.createFiles();//for first time use
                 if(choose==1){
                     System.out.println("1 USDollar is converted to "+euro+" Euros ");
                     double choose1 = sc.nextDouble();
+                    System.out.print(choose1+" USDollars are converted to ");
                     choose1*=euro;
-                    System.out.println(choose1+" Euros");
+                    System.out.print(choose1+" Euros");
+                    System.out.println();
                     System.out.println("---------------------------------------");
                 }
                 if(choose==2){
                     System.out.println("1 USDollar is converted to "+lek+" ALLek ");
                     double choose1 = sc.nextDouble();
+                    System.out.print(choose1+" USDollars are converted to ");
                     choose1*=lek;
-                    System.out.println(choose1+" Lek");
+
+                    System.out.print(choose1+" Lek");
+                    System.out.println();
                     System.out.println("---------------------------------------");
                 }
                 if(choose==3){
                     System.out.println("---------------------------------------");
                     System.out.println("1 USDollar is converted to "+yen+" Yen ");
                     double choose1 = sc.nextDouble();
+                    System.out.print(choose1+" USDollars are converted to ");
                     choose1*=yen;
-                    System.out.println(choose1+" Yen");
+                    System.out.print(choose1+" Yen");
+                    System.out.println();
                     System.out.println("---------------------------------------");
                 }
             }
