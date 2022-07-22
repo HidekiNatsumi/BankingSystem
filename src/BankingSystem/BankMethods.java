@@ -158,7 +158,7 @@ public void createFiles() throws IOException {
     if (!savingsFile.exists()) {
         File tempfile1= new File("bankSavings.txt");
         FileWriter fw=new FileWriter(tempfile1);
-        fw.append("0000 0");//all bank's profit from the interest on every transaction of each customer
+        fw.append("0000 0");//the bank's profile that takes all the profit from the interest it gets on each transaction
         fw.close();
     }
 }
