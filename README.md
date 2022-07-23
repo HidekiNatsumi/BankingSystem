@@ -29,11 +29,12 @@ A banking system with users(no GUI)
   
   All the data related to the bank will be updated in the first page.
   You can also check the exchange rate and also try calculating the exchange rates with any sum of money with the following currencies currencies.
+  <ol>
   <ul>
   <li>Euro</li>
   <li>Lek</li>
   <li>Yen</li>
   </ul>
-  
+  </ol>
   ---
 <strong>Contributors :[Hideki Natsumi](https://github.com/HidekiNatsumi) 
