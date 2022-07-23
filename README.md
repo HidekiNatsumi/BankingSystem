@@ -14,14 +14,16 @@ A banking system with users(no GUI)
    <li>You can register as a customer.</li>
                 Customers have many options.
    </ol>
+   <ol>
   <ul>
+  
    <li>Can Deposit Funds</li>
    <li>Can withdraw money from their account</li>
    <li>Can check their balance</li>
    <li>Can transfer money to other members</li>
    <li>log out</li>
   </ul>
-  
+   </ol>
   Information
   -
   
