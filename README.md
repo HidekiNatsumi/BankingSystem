@@ -1,9 +1,10 @@
 # BankingSystem
 A banking system with users(no GUI)
+
 -
 <ol>
 <li>You can register as an employee.</li>
-   Employees have many options.
+               Employees have many options.
 <ul>
    <li>Can add customers</li>
    <li>Check transactions</li>
@@ -11,7 +12,7 @@ A banking system with users(no GUI)
    <li>log out</li>
   </ul>
    <li>You can register as a customer.</li>
-   Customers have many options.
+                Customers have many options.
    </ol>
   <ul>
    <li>Can Deposit Funds</li>
