@@ -2,6 +2,7 @@
 A banking system with users(no GUI)
 
 You can register as an employee.
+
 -
 Employees have many options.
 <ul>
@@ -12,6 +13,7 @@ Employees have many options.
   </ul>
   You can register as a customer.
 -
+
 Customers have many options.
   <ul>
    <li>Can Deposit Funds</li>
@@ -24,8 +26,13 @@ Customers have many options.
   Information
   -
   
-  Can be updated in the first page with all the bank's information.
-  Can check the Exchange rate and also do calculations with some currencies.
+  All the data related to the bank will be updated in the first page.
+  You can also check the exchange rate and also try calculating the exchange rates with any sum of money with the following currencies currencies.
+  <ul>
+  <li>Euro</li>
+  <li>Lek</li>
+  <li>Yen</li>
+  </ul>
   
   ---
 <strong>Contributors :[Hideki Natsumi](https://github.com/HidekiNatsumi) 
