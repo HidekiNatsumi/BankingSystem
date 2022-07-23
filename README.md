@@ -2,8 +2,8 @@
 A banking system with users(no GUI)
 
 You can register as an employee.
-
 -
+
 Employees have many options.
 <ul>
    <li>Can add customers</li>
@@ -11,6 +11,7 @@ Employees have many options.
    <li>Check the history of each Customer</li>
    <li>log out</li>
   </ul>
+  
   You can register as a customer.
 -
 
