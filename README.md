@@ -1,21 +1,17 @@
 # BankingSystem
 A banking system with users(no GUI)
-
-You can register as an employee.
 -
 <ol>
-<li>Employees have many options.</li>
+<li>You can register as an employee.</li>
+   Employees have many options.
 <ul>
    <li>Can add customers</li>
    <li>Check transactions</li>
    <li>Check the history of each Customer</li>
    <li>log out</li>
   </ul>
-  
-  You can register as a customer.
--
-
-   <li>Customers have many options.</li>
+   <li>You can register as a customer.</li>
+   Customers have many options.
    </ol>
   <ul>
    <li>Can Deposit Funds</li>
