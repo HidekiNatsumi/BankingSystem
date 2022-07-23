@@ -1,9 +1,9 @@
 # BankingSystem
 A banking system with users(no GUI)
 
-
-<ol>
 -
+<ol>
+
 <li>You can register as an employee.</li>
                Employees have many options.
 <ul>
