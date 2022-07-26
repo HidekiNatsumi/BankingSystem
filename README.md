@@ -8,7 +8,7 @@ A banking system with users(no GUI)
 <li>You can register as an employee.</li>
 <ul>
    <li>Can add customers</li>
-   <li>Check transactions</li>
+   <li>Check transactions history</li>
    <li>Check the history of each Customer</li>
    <li>log out</li>
   </ul>
