@@ -11,7 +11,9 @@ A banking system with users(no GUI)
    <li>Check transactions history</li>
    <li>Check the history of each Customer</li>
    <li>log out</li>
-  </ul>
+  </ul> 
+  
+  
    <li>You can register as a customer.</li>
    </ol>
    <ol>
