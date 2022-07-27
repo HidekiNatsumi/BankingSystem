@@ -217,6 +217,10 @@ public void createFiles() throws IOException {
     }
 
     public void registerCustomer() throws IOException {
+        int tempID=id;
+        String tempName=name;
+        String templastname=lastname;
+        String tempPassword=password;
         fileLength(empFile);
         Scanner scan = new Scanner(System.in);
         Random rand = new Random();
@@ -263,6 +267,10 @@ public void createFiles() throws IOException {
         writer1.append(id + " " + 0 + "\n");
         writer1.close();
         System.out.println("Account Created");
+        id=tempID;
+        name=tempName;
+        lastname=templastname;
+        password=tempPassword;
     }
 
     public void login() throws FileNotFoundException {
@@ -501,8 +509,11 @@ public void createFiles() throws IOException {
         }
         sc.close();
     }
+public int customersLength(){
+        return customers.length;
+}
+    public void selectCustomer(int choice){
 
-    public void selectCustomer(int choice) {
         for (int i = 0; i < customers.length; i++) {
             if (i + 1 == choice) {
                 int temp = Integer.parseInt(customers[i]);
@@ -512,6 +523,7 @@ public void createFiles() throws IOException {
     }
 
     public void checkCustomerAccount(int choice) throws FileNotFoundException {
+
         if (choice == 1) {
             Scanner sc = new Scanner(savingsFile);
             String temp1, temp2;
@@ -611,8 +623,8 @@ fileLength(savingsFile);
                 System.out.println("You cant transfer from your account to your account!");
                 return;
             }
-             if(idC==0){
-           
+            if(idC==0)
+            {
                 System.out.println("You can't transfer your funds to this account!");
                 return;
             }
