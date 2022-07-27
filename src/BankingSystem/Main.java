@@ -16,7 +16,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Main main =new Main();
         BankMethods bank = new BankMethods();
-        bank.createFiles();
         boolean runApp=true;
 while(runApp){
 
@@ -46,7 +45,7 @@ bank.createFiles();//for first time use
             System.out.println("Calculate exchange rates\nexit ");
             System.out.println("---------------------------------------");
             int decide1=sc.nextInt();
-               if(decide1==1){
+            if(decide1==1){
                 System.out.println("---------------------------------------");
                 System.out.println("Exchange USDollar with\nEuro\nALLek\nYen");
                 System.out.println("---------------------------------------");
@@ -84,7 +83,6 @@ bank.createFiles();//for first time use
             if(decide1==2){
                 break;
             }
-            System.out.println("---------------------------------------");
         }
         }
         case 2 -> {
@@ -122,11 +120,17 @@ bank.createFiles();//for first time use
                             System.out.println("Select the customer");
                             bank.checkCustomersId();
                             int c=emp.nextInt();
+
+                            if(c<=0||c>bank.customersLength()){
+                                System.out.println("This option does not exist! \nChoose from 1 to "+bank.customersLength());
+                                continue;
+                            }
                             bank.selectCustomer(c);
 
                             System.out.println("Choose an option");
                             System.out.println("Check Balance\nCheck Transactions");
                             int c1=emp.nextInt();
+
                             bank.checkCustomerAccount(c1);
                             continue;
                         }
@@ -199,10 +203,10 @@ when logged in as an employee you have the option to:
 -add a customer account
 -see the transaction history of a customer
 -see the deposits of a customer
--confirm bank loans(future)
+-confirm bank loans
 when logged in as a customer you have the option to:
 -add funds (deposit)money in your account
 -withdraw money from your account
--request bank loans(future)
--convert money(future)
+-request bank loans
+-convert money
  */
