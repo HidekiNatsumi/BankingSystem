@@ -13,8 +13,6 @@ A banking system with users(no GUI)
    <li>log out</li>
   </ul> 
    <li>You can register as a customer.</li>
-   </ol>
-   <ol>
   <ul>
    <li>Can Deposit Funds</li>
    <li>Can withdraw money from their account</li>
