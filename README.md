@@ -18,7 +18,6 @@ A banking system with users(no GUI)
    </ol>
    <ol>
   <ul>
-  
    <li>Can Deposit Funds</li>
    <li>Can withdraw money from their account</li>
    <li>Can check their balance</li>
