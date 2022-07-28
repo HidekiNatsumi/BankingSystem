@@ -38,13 +38,13 @@ A banking system with users(no GUI)
    Update
   -
   
-  Currently all the customers can contact the bank employee's via the bank support message line and tell about any error they may have encountered.
-  The same goes for the employees who can respond to customer's messages to help them on each step they need.
+  Currently all customers can contact the bank employee's via the bank support message line and tell about any error they may have encountered.
+  The same goes for employees who can respond to the customer's messages and help them on each step they need.
   <ol>
   <ul>
   <li>Customers can message to the employees and read their messages.</li>
   <li>All the employees can respond to the customers via the bank support message line.</li>
-  <li>Every employee can access the bank support chat .</li>
+  <li>Every employee can access the bank support chat.</li>
   <li>Multiple employees can communicate with the same customer.</li>
   </ul>
   </ol>
