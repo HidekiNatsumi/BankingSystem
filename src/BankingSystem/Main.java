@@ -8,10 +8,10 @@ public class Main {
         System.out.println("First Page\nRegister\nLog in\nExit");
     }
     public static void menuEmployee(){
-        System.out.println("Add a customer\nSearch and check customer's account\nCheck transaction history\nLog out");
+        System.out.println("Add a customer\nSearch and check customer's account\nCheck messages\nCheck transaction history\nLog out");
     }
     public static void menuCustomer(){
-        System.out.println("Deposit funds\nWithdraw money\nCheck Balance\nTransfer Money\nLog out");
+        System.out.println("Deposit funds\nWithdraw money\nCheck Balance\nTransfer Money\nSend a message to an employee\nLog out");
     }
     public static void main(String[] args) throws IOException {
         Main main =new Main();
@@ -118,7 +118,7 @@ bank.createFiles();//for first time use
 
                         if(decide==2) {
                             System.out.println("Select the customer");
-                            bank.checkCustomersId();
+                            bank.checkCustomersAndEmployeesId(1);
                             int c=emp.nextInt();
 
                             if(c<=0||c>bank.customersLength()){
@@ -134,11 +134,16 @@ bank.createFiles();//for first time use
                             bank.checkCustomerAccount(c1);
                             continue;
                         }
-                        if(decide==3) {
+                        if(decide==3){
+                            System.out.println("Read messages");
+                            bank.readMessagesEmployee();
+continue;
+                        }
+                        if(decide==4) {
                             bank.transactionHistory();
                             continue;
                         }
-                        if(decide==4){
+                        if(decide==5){
                             System.out.println("You have logged out " + bank.getName()+" "+bank.getLastname());
                             System.out.println("---------------------------------------");
                             bank.delTempVars();
@@ -173,6 +178,11 @@ bank.createFiles();//for first time use
                             continue;
                         }
                         if(cus==5){
+                            bank.readMessageCustomer();
+                            bank.createMessageFile();
+                            continue;
+                        }
+                        if(cus==6){
                             System.out.println("You have logged out " + bank.getName()+" "+bank.getLastname());
                             System.out.println("---------------------------------------");
                             bank.delTempVars();
