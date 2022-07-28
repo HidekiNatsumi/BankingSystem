@@ -35,7 +35,7 @@ A banking system with users(no GUI)
   </ul>
   </ol>
   
-   Update
+  Additional Update
   -
   
   Currently all customers can contact the bank employee's via the bank support message line and tell about any error they may have encountered.
