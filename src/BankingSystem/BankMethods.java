@@ -21,6 +21,7 @@ public class BankMethods {
     private int CustomerIdOnUseByEmployee;
     private String[]employees;
 
+
     public String[] getEmployees() {
         return employees;
     }
@@ -161,6 +162,12 @@ public void createFiles() throws IOException {
         fw.append("0000 0");//the bank's profile that takes all the profit from the interest it gets on each transaction
         fw.close();
     }
+    if (!messageFile.exists()) {
+        File messageFile =new File("messages.txt");
+        FileWriter fw=new FileWriter(messageFile);
+        fw.close();
+    }
+    
 }
     public void fileLength(File file) throws FileNotFoundException {
         Scanner sc = new Scanner(file);
@@ -470,12 +477,12 @@ public void createFiles() throws IOException {
 
     }
 
-    public void checkCustomersId() throws FileNotFoundException {
+    public void checkCustomersAndEmployeesId(int make ) throws FileNotFoundException {
         Scanner scan = new Scanner(empFile);
         String temp1, temp2, temp3, temp4, temp5;
         int tempnr = 0;
         int count = 0;
-
+        int count1 = 0 ;
 
         while (scan.hasNext()) {
             temp1 = scan.next();
@@ -486,13 +493,18 @@ public void createFiles() throws IOException {
             if (temp5.equals("customer")) {
                 count++;
             }
+            if (temp5.equals("employee")) {
+                count1++;
+            }
         }
         scan.close();
         customers = new String[count];
+       employees = new String[count1];
         Scanner sc = new Scanner(empFile);
         String temp11, temp22, temp33, temp44, temp55;
         int tempnr1 = 0;
         count = 0;
+        count1 = 0 ;
 
 
         while (sc.hasNext()) {
@@ -501,10 +513,15 @@ public void createFiles() throws IOException {
             temp33 = sc.next();
             temp44 = sc.next();
             temp55 = sc.next();
-            if (temp55.equals("customer")) {
+            if (temp55.equals("customer")&&make==1) {
                 customers[count] = temp44;
                 System.out.println(count + 1 + ". " + customers[count]);
                 count++;
+            }
+            if (temp55.equals("employee")&&make==2) {
+                employees[count1] = temp44;
+                System.out.println(count1 + 1 + ". " + employees[count1]);
+                count1++;
             }
         }
         sc.close();
@@ -573,7 +590,6 @@ public int customersLength(){
             temp=sc.nextLine();
             System.out.println(temp+"$");
         }
-
     }
     public void informationPage() throws FileNotFoundException {
         Scanner sc = new Scanner(empFile);
@@ -684,4 +700,193 @@ fileLength(savingsFile);
             fw.close();
         }
     }
+    private File messageFileID ;
+    private File messageFile =new File("messages.txt");
+
+    public File getMessageFile() {
+        return messageFile;
+    }
+
+    public void setMessageFile(File messageFile) {
+        this.messageFile = messageFile;
+    }
+
+    public File getMessageFileID() {
+        return messageFileID;
+    }
+
+    public void setMessageFileID(File messageFileID) {
+        this.messageFileID = messageFileID;
+    }
+
+    public void readMessageCustomer() throws IOException {
+        messageFileID=new File(id+".txt");
+        FileWriter fw = new FileWriter(messageFile,true);
+        fw.close();
+        FileWriter fw1 = new FileWriter(messageFileID,true);
+        fw1.close();
+        Scanner sc= new Scanner(messageFileID);
+        String temp1,temp2;
+        while(sc.hasNextLine()){
+            temp1=sc.nextLine();
+            temp2=sc.nextLine();
+            if(temp2.equals("1")){
+                System.out.println("You sent: "+temp1);
+            }
+            if(temp2.equals("2")){
+                System.out.println("The bank support sent: "+temp1);
+            }
+        }
+        sc.close();
+    }
+    public void readMessagesEmployee() throws IOException {
+        int tempid= id;
+        FileWriter fw = new FileWriter(messageFile,true);
+        fw.close();
+        Scanner sc = new Scanner(messageFile);
+        String temp1,temp2;
+        System.out.println("Choose the id to chat with!");
+        int count=0;
+        while(sc.hasNext()){
+            temp1= sc.next();
+            temp2= sc.next();
+            System.out.println((count+1)+". "+temp1+" has sent "+temp2+" messages!");
+            count++;
+        }
+        sc.close();
+        Scanner sc1=new Scanner(System.in);
+        int choice=sc1.nextInt();
+
+        Scanner sc2 = new Scanner(messageFile);
+        String temp11,temp22;
+        count=0;
+        System.out.println("Choose the id to chat with!");
+        while(sc2.hasNext()){
+            temp11= sc2.next();
+            temp22= sc2.next();
+            int temponr=Integer.parseInt(temp11);
+            if(count+1==choice){
+
+                id=temponr;
+                break;
+            }
+            count++;
+        }
+        sc2.close();
+       messageFileID =new File(id+".txt");
+        Scanner scid= new Scanner(messageFileID);
+        String tempp1,tempp2;
+        while(scid.hasNextLine()){
+            tempp1=scid.nextLine();
+            tempp2=scid.nextLine();
+            if(tempp2.equals("2")){
+                System.out.println("You sent: "+tempp1);
+            }
+            if(tempp2.equals("1")){
+                System.out.println("The customer sent: "+tempp1);
+            }
+        }
+scid.close();
+        FileWriter fw1 = new FileWriter(messageFileID,true);
+
+        System.out.println("----------------------------------------");
+        System.out.println("Send a message to "+id);
+        count=0;
+        Scanner sc11= new Scanner(System.in);
+        while(true){
+            String msg= sc11.nextLine();
+            if(msg.equals("-1")&&count>0){
+
+                break;
+
+            }
+            if(msg.equals("-1")){
+                break;
+            }
+            fw1.append(msg+"\n2\n");
+            count++;
+        }
+        count=0;
+
+        fw1.close();
+        id=tempid;
+    }
+    public void createMessageFile() throws IOException {
+        System.out.println("-----------------------------------");
+        System.out.println("Send a message to an employee");
+        Scanner sc = new Scanner(System.in);
+         messageFileID =new File(id+".txt");
+         messageFile =new File("messages.txt");
+        System.out.println("Press -1 to exit");
+
+        FileWriter fw = new FileWriter(messageFileID,true);
+        FileWriter fw1 = new FileWriter(messageFile,true);
+        Scanner scan = new Scanner(messageFile);
+        String temp1,temp2;
+        int count=0;
+        fileLength(messageFile);
+        String []arr=new String[(empfileSize*2)];
+        int tempnr;
+        boolean ex=false;
+        while(scan.hasNext()){
+            temp1=scan.next();
+            temp2=scan.next();
+            tempnr=Integer.parseInt(temp1);
+            if(tempnr==id){
+                ex=true;
+            }
+            arr[count]=temp1;
+            arr[count+1]=temp2;
+            count=count+2;
+
+        }
+        PrintWriter writer = new PrintWriter(messageFile);
+        writer.print("");
+        writer.close();
+        count=0;
+        String tempoo = null;
+        if(arr.length>0){
+            for(int i = 0 ; i< arr.length;i++){
+                if(i%2==0){
+                    if(arr[i].equals(id+"")){
+                        tempoo=arr[i+1];
+                        i++;
+                        continue;
+                    }
+                    fw1.append(arr[i]+" "+arr[i+1]+"\n");
+                }
+            }
+        }
+        int tempVal = 0;
+        fileLength(messageFileID);
+if(arr.length>0&&empfileSize>0&&messageFile.exists()&&messageFileID.exists()){
+    tempVal=Integer.parseInt(tempoo);
+}
+      
+        while(true){
+            String msg=sc.nextLine();
+            if(msg.equals("-1")&&count>0){
+                if(ex||arr.length<=0){
+                   
+                    fw1.append(id+" "+(count+tempVal)+"\n");
+                    break;
+                }
+                else{
+                    fw1.append(id+" "+(count+tempVal)+"\n");
+                    break;
+                }
+
+            }
+            if(msg.equals("-1")){
+                fw1.append(id+" "+(count+tempVal)+"\n");
+                break;
+            }
+            fw.append(msg+"\n1\n");
+            count++;
+        }
+count=0;
+        fw.close();
+        fw1.close();
+    }
+
 }
