@@ -35,5 +35,18 @@ A banking system with users(no GUI)
   </ul>
   </ol>
   
+   Update
+  -
+  
+  Currently all the customers can contact the bank employee's via the bank support message line and tell about any error they may have encountered.
+  The same goes for the employees who can respond to customer's messages to help them on each step they need.
+  <ol>
+  <ul>
+  <li>Customers can message to the employees and read their messages.</li>
+  <li>All the employees can respond to the customers via the bank support message line.</li>
+  <li>Every employee can access the bank support chat from each customer.</li>
+  </ul>
+  </ol>
+  
   ---
 <strong>Contributors :[Hideki Natsumi](https://github.com/HidekiNatsumi) 
