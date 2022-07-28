@@ -44,7 +44,8 @@ A banking system with users(no GUI)
   <ul>
   <li>Customers can message to the employees and read their messages.</li>
   <li>All the employees can respond to the customers via the bank support message line.</li>
-  <li>Every employee can access the bank support chat from each customer.</li>
+  <li>Every employee can access the bank support chat .</li>
+  <li>Multiple employees can communicate with the same customer.</li>
   </ul>
   </ol>
   
