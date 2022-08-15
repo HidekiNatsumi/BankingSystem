@@ -2,7 +2,6 @@
 
 A banking system with users(no GUI)
 
-
 <ol>
 
 <li>You can register as an employee.</li>
